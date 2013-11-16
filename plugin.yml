@@ -1,3 +1,6 @@
 name:  bSmash
 main:  me.smash.Main.Main
 version:  1.0
+commands:
+   sbarena:
+     description: jk2
