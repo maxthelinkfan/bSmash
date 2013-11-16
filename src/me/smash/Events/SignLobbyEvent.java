@@ -60,9 +60,7 @@ public class SignLobbyEvent implements Listener{
     		e.setLine(2, lone.size() + "/" + "6");
     		e.setLine(0, ChatColor.RED + "[Smash Lobby]");
     		if(settings.getData().getString(e.getLine(1)) == null){
-    		settings.getData().set("arenas." + e.getLine(1) + ".x", "");
-    		settings.getData().set("arenas." + e.getLine(1) + ".y", "");
-    		settings.getData().set("arenas." + e.getLine(1) + ".z", "");
+    		settings.getData().set("arenas." + e.getLine(1), "");
     		p.sendMessage(ChatColor.GREEN + "Arena " + e.getLine(1) + " has been created!");
     		settings.saveData();
     		

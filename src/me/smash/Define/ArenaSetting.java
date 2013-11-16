@@ -23,26 +23,23 @@ public class ArenaSetting implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
 		if(cmd.getName().equalsIgnoreCase("sbarena")) {
 			
-		}
 			Player p = (Player) sender;			
 			if(args.length <= 0) {
 				p.sendMessage(ChatColor.RED + "--");
 			}
 			if(args.length > 0){
 			if(args[0].equalsIgnoreCase("set")) {
-				if(args[1].equals(settings.getData().contains(args[1]))) {			
+				if(settings.getData().contains("arenas." + args[1])) {
 				settings.getData().set("arenas." + args[1] + ".x", Double.valueOf(p.getLocation().getX()));
 				settings.getData().set("arenas." + args[1] + ".y", Double.valueOf(p.getLocation().getY()));
 				settings.getData().set("arenas." + args[1] + ".z", Double.valueOf(p.getLocation().getZ()));
 				sender.sendMessage(ChatColor.GREEN + "You have start point for arena " + args[1] + "!");
 				settings.saveData();
+				}
 					
 				}
 			}
-				
-			
-			return false;
 			}
-			return false;
-			}
+		return false;
+}
 }
